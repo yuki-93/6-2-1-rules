@@ -5,9 +5,7 @@ const getRandomItem = (items: Array<string>): string => items[Math.floor(Math.ra
 const prepareData = async (): Promise<Array<Array<string>>> => {
   const data: string = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
   const dataArray: Array<string> = data.split("\n")
-  const startIndex = dataArray.findIndex(item => item === "## Rows");
-  // slice data and cleanup empty values
-  const parsedData: Array<string> = dataArray.slice(startIndex+1, data.length).filter(item => item);
+  const parsedData = dataArray.filter(row => row.includes("{x}"));
 
   // @todo be sure items are unique? 
   const rulesRaw: Array<string> = [getRandomItem(parsedData), getRandomItem(parsedData), getRandomItem(parsedData)];
