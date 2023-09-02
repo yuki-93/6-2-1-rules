@@ -26,6 +26,32 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
     app.innerHTML = rules.map((rule: Array<string>) => `<p>${rule.join("&nbsp;")}</p>`).join("");
   }
 
+  const text6 = document.querySelector("#sticker_6_text>tspan");
+  if (text6) {
+    text6.innerHTML = rules[0][0];
+  }
+  const text2 = document.querySelector("#sticker_2_text>tspan");
+  if (text2) {
+    text2.innerHTML = rules[1][0];
+  }
+  const text1 = document.querySelector("#sticker_1_text>tspan");
+  if (text1) {
+    text1.innerHTML = rules[2][0];
+  }
+
+  const emoji6 = document.querySelector("#sticker_6_emoji>tspan");
+  if (emoji6) {
+    emoji6.innerHTML = rules[0][1];
+  }
+  const emoji2 = document.querySelector("#sticker_2_emoji>tspan");
+  if (emoji2) {
+    emoji2.innerHTML = rules[1][1];
+  }
+  const emoji1 = document.querySelector("#sticker_1_emoji>tspan");
+  if (emoji1) {
+    emoji1.innerHTML = rules[2][1];
+  }
+
   return rules;
 }
 

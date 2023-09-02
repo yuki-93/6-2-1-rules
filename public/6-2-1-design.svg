@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="74mm"
+   height="52mm"
+   viewBox="0 0 74 52"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="6-2-1-design.svg"
+   inkscape:export-filename="6_2_1-design.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.9945847"
+     inkscape:cx="143.56937"
+     inkscape:cy="116.53276"
+     inkscape:window-width="2256"
+     inkscape:window-height="1398"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <rect
+       x="2"
+       y="2"
+       width="23"
+       height="23"
+       id="sticker6numberbbox" />
+    <rect
+       x="25.5"
+       y="2"
+       width="23"
+       height="23"
+       id="sticker2numberbbox" />
+    <rect
+       x="49.5"
+       y="2"
+       width="23"
+       height="23"
+       id="sticker1numberbbox" />
+    <rect
+       x="2"
+       y="22"
+       width="23"
+       height="12"
+       id="sticker6textbbox" />
+    <rect
+       x="25.5"
+       y="22"
+       width="23"
+       height="12"
+       id="sticker2textbbox" />
+    <rect
+       x="49.5"
+       y="22"
+       width="23"
+       height="12"
+       id="sticker1textbbox" />
+    <rect
+       x="2"
+       y="35"
+       width="23"
+       height="23"
+       id="sticker6emojibbox" />
+    <rect
+       x="25.5"
+       y="35"
+       width="23"
+       height="23"
+       id="sticker2emojibbox" />
+    <rect
+       x="49.5"
+       y="35"
+       width="23"
+       height="23"
+       id="sticker1emojibbox" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="page_border"
+       style="color:#000000;fill:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
+       d="M 2.5273438,0 C 1.1344564,0 0,1.1427302 0,2.5390625 V 49.460937 C 0,50.85727 1.1344564,52 2.5273438,52 H 71.472656 C 72.865544,52 74,50.85727 74,49.460937 V 2.5390625 C 74,1.1427302 72.865544,0 71.472656,0 Z m 0,1 H 71.472656 C 72.325696,1 73,1.6763055 73,2.5390625 V 49.460937 C 73,50.323695 72.325696,51 71.472656,51 H 2.5273438 C 1.6743039,51 1,50.323695 1,49.460937 V 2.5390625 C 1,1.6763055 1.6743039,1 2.5273438,1 Z" />
+    <path
+       id="sticker_6_border"
+       style="color:#000000;fill:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
+       d="M 4.3613282,1.5 C 2.8145144,1.5 1.5,2.6321401 1.5,4.0957031 V 47.904297 C 1.5,49.36786 2.8145144,50.5 4.3613282,50.5 H 21.636719 C 23.183533,50.5 24.5,49.36786 24.5,47.904297 V 4.0957031 C 24.5,2.6321401 23.183533,1.5 21.636719,1.5 Z m 0,1 H 21.636719 C 22.707381,2.5 23.5,3.2370928 23.5,4.0957031 V 47.904297 C 23.5,48.762907 22.707381,49.5 21.636719,49.5 H 4.3613282 C 3.2906661,49.5 2.5000001,48.762907 2.5000001,47.904297 V 4.0957031 C 2.5000001,3.2370928 3.2906661,2.5 4.3613282,2.5 Z" />
+    <path
+       id="sticker_2_border"
+       style="color:#000000;fill:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
+       d="M 28.363281,1.5 C 26.816467,1.5 25.5,2.6321401 25.5,4.0957031 V 47.904297 C 25.5,49.36786 26.816467,50.5 28.363281,50.5 H 45.636719 C 47.183533,50.5 48.5,49.36786 48.5,47.904297 V 4.0957031 C 48.5,2.6321401 47.183533,1.5 45.636719,1.5 Z m 0,1 H 45.636719 C 46.707381,2.5 47.5,3.2370928 47.5,4.0957031 V 47.904297 C 47.5,48.762907 46.707381,49.5 45.636719,49.5 H 28.363281 C 27.292619,49.5 26.5,48.762907 26.5,47.904297 V 4.0957031 C 26.5,3.2370928 27.292619,2.5 28.363281,2.5 Z" />
+    <path
+       id="sticker_1_border"
+       style="color:#000000;fill:#000000;stroke-linejoin:bevel;-inkscape-stroke:none"
+       d="M 52.363281,1.5 C 50.816467,1.5 49.5,2.6321401 49.5,4.0957031 V 47.904297 C 49.5,49.36786 50.816467,50.5 52.363281,50.5 H 69.638672 C 71.185485,50.5 72.5,49.36786 72.5,47.904297 V 4.0957031 C 72.5,2.6321401 71.185485,1.5 69.638672,1.5 Z m 0,1 H 69.638672 C 70.709334,2.5 71.5,3.2370928 71.5,4.0957031 V 47.904297 C 71.5,48.762907 70.709334,49.5 69.638672,49.5 H 52.363281 C 51.292619,49.5 50.5,48.762907 50.5,47.904297 V 4.0957031 C 50.5,3.2370928 51.292619,2.5 52.363281,2.5 Z" />
+    <text
+       xml:space="preserve"
+       id="sticker_6_number"
+       style="font-size:20px;line-height:1.25;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';text-align:center;white-space:pre;shape-inside:url(#sticker6numberbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="6.8799934"
+         y="18.921855"
+         id="tspan8">6</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_2_number"
+       style="font-size:20px;line-height:1.25;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';text-align:center;white-space:pre;shape-inside:url(#sticker2numberbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="30.859997"
+         y="18.921855"
+         id="tspan9">2</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_1_number"
+       style="font-size:20px;line-height:1.25;font-family:'Saira Stencil One';-inkscape-font-specification:'Saira Stencil One';text-align:center;white-space:pre;shape-inside:url(#sticker1numberbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="56.979996"
+         y="18.921855"
+         id="tspan10">1</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_6_text"
+       style="font-size:4px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;white-space:pre;shape-inside:url(#sticker6textbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="5.9180031"
+         y="25.684466"
+         id="tspan11">Stunden </tspan><tspan
+         x="7.8360023"
+         y="30.684466"
+         id="tspan12">Schlaf</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_2_text"
+       style="font-size:4px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;writing-mode:lr-tb;white-space:pre;shape-inside:url(#sticker2textbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="27.338005"
+         y="25.684466"
+         id="tspan13">Mahlzeiten</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_1_text"
+       style="font-size:4px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;white-space:pre;shape-inside:url(#sticker1textbbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="54.164001"
+         y="25.684466"
+         id="tspan14">Dusche</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_6_emoji"
+       style="font-size:10px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;white-space:pre;shape-inside:url(#sticker6emojibbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="6.6347656"
+         y="44.211165"
+         id="tspan15">😴</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_2_emoji"
+       style="font-size:10px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;writing-mode:lr-tb;white-space:pre;shape-inside:url(#sticker2emojibbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="30.134766"
+         y="44.211165"
+         id="tspan16">🍕</tspan></text>
+    <text
+       xml:space="preserve"
+       id="sticker_1_emoji"
+       style="font-size:10px;line-height:1.25;font-family:Questrial;-inkscape-font-specification:Questrial;text-align:center;white-space:pre;shape-inside:url(#sticker1emojibbox);display:inline"
+       x="0"
+       y="0"><tspan
+         x="54.134766"
+         y="44.211165"
+         id="tspan17">🚿</tspan></text>
+  </g>
+</svg>
