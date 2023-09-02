@@ -59,7 +59,7 @@ const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
 
 
 
-const rules = await prepareData().then(rules => rules);
-
-
-console.log({rules});
+(async () => {
+  const rules = await prepareData().then(rules => rules);
+  console.log({rules});
+})();
