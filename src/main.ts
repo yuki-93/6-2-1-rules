@@ -7,8 +7,13 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
   const dataArray: Array<string> = data.split("\n")
   const parsedData = dataArray.filter(row => row.includes("{x}"));
 
-  // @todo be sure items are unique? 
-  const rulesRaw: Array<string> = [getRandomItem(parsedData), getRandomItem(parsedData), getRandomItem(parsedData)];
+  const rulesRaw: Array<string> = [];
+  while (rulesRaw.length < 3) {
+    const item = getRandomItem(parsedData);
+    if(rulesRaw.every(rule => rule !== item)) {
+      rulesRaw.push(item);
+    }
+  }
 
   const rules = [
     prepareRow(rulesRaw[0]),
@@ -18,7 +23,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
 
   const app = document.querySelector("#app");
   if (app) {
-    app.innerHTML = rules.map((rule: Array<string>) => `<p>${rule.join("")}</p>`).join("");
+    app.innerHTML = rules.map((rule: Array<string>) => `<p>${rule.join("&nbsp;")}</p>`).join("");
   }
 
   return rules;
@@ -26,6 +31,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
 
 const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
   const prepred = row.split(';').map((el: string) => {
+    // drop placeholder, remove blanks
     let pretty = el.replace(/{x}/g, "").trim();
 
     const match = pretty.match(/\[.*\]/);
@@ -34,15 +40,15 @@ const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
     if (pluralSubstring) {
       const splitted = pluralSubstring.replace("[", "").replace("]", "").split("|");
       // first item is plural
-      let subStr = splitted[0];
+      let pluralizationStr = splitted[0];
 
       // rewrite subStr, if singular should be used
       if (!isPlural && splitted.length === 2) {
-        subStr = splitted[1];
+        pluralizationStr = splitted[1];
       }
 
       // replace string
-      pretty = match?.input?.replace(/\[.*\]/, subStr) ?? pretty;
+      pretty = match?.input?.replace(/\[.*\]/, pluralizationStr) ?? pretty;
     }
    
     return pretty;
