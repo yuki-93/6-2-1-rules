@@ -2,7 +2,7 @@ import './style.css'
 
 const getRandomItem = (items: Array<string>): string => items[Math.floor(Math.random()*items.length)]
 
-const prepareData = async () => {
+const prepareData = async (): Promise<Array<string>> => {
   const data: string = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
   const dataArray: Array<string> = data.split("\n")
   const startIndex = dataArray.findIndex(item => item === "## Rows");
@@ -23,7 +23,16 @@ const prepareData = async () => {
     app.innerHTML = rules.map(rule => `<p>${rule}</p>`).join("");
   }
 
-  console.log({parsedData, rules});
+  return rules;
 }
 
-prepareData();
+const generateSvg = (rules: Array<string>): void => {
+  // @todo
+}
+
+
+const rules = await prepareData();
+generateSvg(rules);
+
+
+console.log({rules});
