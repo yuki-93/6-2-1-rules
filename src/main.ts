@@ -2,7 +2,7 @@ import './style.css'
 
 const getRandomItem = (items: Array<string>): string => items[Math.floor(Math.random()*items.length)]
 
-const prepareData = async (): Promise<Array<string>> => {
+const prepareData = async (): Promise<Array<Array<string>>> => {
   const data: string = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
   const dataArray: Array<string> = data.split("\n")
   const startIndex = dataArray.findIndex(item => item === "## Rows");
@@ -13,26 +13,49 @@ const prepareData = async (): Promise<Array<string>> => {
   const rulesRaw: Array<string> = [getRandomItem(parsedData), getRandomItem(parsedData), getRandomItem(parsedData)];
 
   const rules = [
-    rulesRaw[0].replace(/{x}/g, "6"),
-    rulesRaw[1].replace(/{x}/g, "2"),
-    rulesRaw[2].replace(/{x}/g, "1"),
-  ];
+    prepareRow(rulesRaw[0]),
+    prepareRow(rulesRaw[1]),
+    prepareRow(rulesRaw[2], false),
+  ]
 
   const app = document.querySelector("#app");
   if (app) {
-    app.innerHTML = rules.map(rule => `<p>${rule}</p>`).join("");
+    app.innerHTML = rules.map((rule: Array<string>) => `<p>${rule.join("")}</p>`).join("");
   }
 
   return rules;
 }
 
-const generateSvg = (rules: Array<string>): void => {
-  // @todo
+const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
+  const prepred = row.split(';').map((el: string) => {
+    let pretty = el.replace(/{x}/g, "").trim();
+
+    const match = pretty.match(/\[.*\]/);
+    // check for substring with singular/plural informaiton
+    const pluralSubstring = match?.[0];
+    if (pluralSubstring) {
+      const splitted = pluralSubstring.replace("[", "").replace("]", "").split("|");
+      // first item is plural
+      let subStr = splitted[0];
+
+      // rewrite subStr, if singular should be used
+      if (!isPlural && splitted.length === 2) {
+        subStr = splitted[1];
+      }
+
+      // replace string
+      pretty = match?.input?.replace(/\[.*\]/, subStr) ?? pretty;
+    }
+   
+    return pretty;
+  });
+
+  return prepred;
 }
 
 
-const rules = await prepareData();
-generateSvg(rules);
+
+const rules = await prepareData().then(rules => rules);
 
 
 console.log({rules});
