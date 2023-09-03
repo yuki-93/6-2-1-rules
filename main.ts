@@ -8,7 +8,7 @@ async function prepareData(): Promise<Array<Array<string>>> {
     data = await fetch("/rules.txt").then((r) => r.text());
     window.sessionStorage.setItem("rawData", data ?? "");
   }
-  const dataArray: Array<string> = data.split("\n");
+  const dataArray = data.split("\n");
   const parsedData = dataArray.filter((row) => row.includes("{x}"));
 
   const rulesRaw: Array<string> = [];
@@ -88,7 +88,7 @@ async function prepareData(): Promise<Array<Array<string>>> {
 }
 
 function prepareRow(row: string, isPlural = true): Array<string> {
-  const prepred = row.split(";").map((el: string) => {
+  const prepred = row.split(";").map((el) => {
     // drop placeholder, remove blanks
     let pretty = el.replace(/{x}/g, "").trim();
 
