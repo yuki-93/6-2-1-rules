@@ -64,3 +64,8 @@ h1 {
 p { 
   font-size: 30px;
 }
+
+footer {
+  position: absolute;
+  bottom: 5px;
+}

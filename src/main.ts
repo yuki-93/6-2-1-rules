@@ -89,6 +89,9 @@ const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
       // rewrite subStr, if singular should be used
       if (!isPlural && splitted.length === 2) {
         pluralizationStr = splitted[1];
+      } else if (!isPlural && splitted.length === 1) {
+        // singular form is substring of whole word
+        pluralizationStr = ""; 
       }
 
       // replace string
