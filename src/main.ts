@@ -28,7 +28,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
 
   const text6 = document.querySelector("#sticker_6_text");
   if (text6) {
-    const ruleParts = rules[0][0].split(/[ -]/);
+    const ruleParts = rules[0][0].split(/[ ]/);
     text6.childNodes.forEach((node, index) => {
       const rulePart = ruleParts[index];
       if (rulePart) {
@@ -38,7 +38,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
   }
   const text2 = document.querySelector("#sticker_2_text");
   if (text2) {
-    const ruleParts = rules[1][0].split(/[ -]/);
+    const ruleParts = rules[1][0].split(/[ ]/);
     text2.childNodes.forEach((node, index) => {
       const rulePart = ruleParts[index];
       if (rulePart) {
@@ -48,7 +48,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
   }
   const text1 = document.querySelector("#sticker_1_text");
   if (text1) {
-    const ruleParts = rules[2][0].split(/[ -]/);
+    const ruleParts = rules[2][0].split(/[ ]/);
     text1.childNodes.forEach((node, index) => {
       const rulePart = ruleParts[index];
       if (rulePart) {      

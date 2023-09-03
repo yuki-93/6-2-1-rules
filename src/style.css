@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: "Questrial";
-  src: url("Questrial-Regular.ttf");
+  src: url("/Questrial-Regular.ttf");
 }
 
 @font-face {
   font-family: "Saira Stencil One";
-  src: url("SairaStencialOne-Regular.ttf");
+  src: url("/SairaStencialOne-Regular.ttf");
 }
 
 a {
