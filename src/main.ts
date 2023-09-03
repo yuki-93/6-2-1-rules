@@ -3,7 +3,12 @@ import './style.css'
 const getRandomItem = (items: Array<string>): string => items[Math.floor(Math.random()*items.length)]
 
 const prepareData = async (): Promise<Array<Array<string>>> => {
-  const data: string = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
+  const storage = window.sessionStorage.getItem("rawData");
+  let data = storage ?? "";
+  if (!storage) {
+    data = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
+    window.sessionStorage.setItem("rawData", data ?? "");
+  }
   const dataArray: Array<string> = data.split("\n")
   const parsedData = dataArray.filter(row => row.includes("{x}"));
 
