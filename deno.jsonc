@@ -1,0 +1,9 @@
+{
+  "lock": false,
+  "tasks": {
+    "bundle": "deno run --allow-env --allow-read --allow-write=public/main.js --allow-net=deno.land bundle.ts"
+  },
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.asynciterable", "deno.ns"]
+  }
+}

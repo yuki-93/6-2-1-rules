@@ -1,21 +1,20 @@
-import './style.css'
+const getRandomItem = (items: Array<string>): string =>
+  items[Math.floor(Math.random() * items.length)];
 
-const getRandomItem = (items: Array<string>): string => items[Math.floor(Math.random()*items.length)]
-
-const prepareData = async (): Promise<Array<Array<string>>> => {
+async function prepareData(): Promise<Array<Array<string>>> {
   const storage = window.sessionStorage.getItem("rawData");
   let data = storage ?? "";
   if (!storage) {
-    data = await fetch("/rules.txt").then(r => r.text());
+    data = await fetch("/rules.txt").then((r) => r.text());
     window.sessionStorage.setItem("rawData", data ?? "");
   }
-  const dataArray: Array<string> = data.split("\n")
-  const parsedData = dataArray.filter(row => row.includes("{x}"));
+  const dataArray: Array<string> = data.split("\n");
+  const parsedData = dataArray.filter((row) => row.includes("{x}"));
 
   const rulesRaw: Array<string> = [];
   while (rulesRaw.length < 3) {
     const item = getRandomItem(parsedData);
-    if(rulesRaw.every(rule => rule !== item)) {
+    if (rulesRaw.every((rule) => rule !== item)) {
       rulesRaw.push(item);
     }
   }
@@ -24,14 +23,20 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
     prepareRow(rulesRaw[0]),
     prepareRow(rulesRaw[1]),
     prepareRow(rulesRaw[2], false),
-  ]
+  ];
 
   const app = document.querySelector("#app>#content");
   if (app) {
     app.innerHTML = [
-      `<p class="number-label">6</p><p class="rule-label">${rules[0].join("&nbsp;")}</p>`,
-      `<p class="number-label">2</p><p class="rule-label">${rules[1].join("&nbsp;")}</p>`,
-      `<p class="number-label">1</p><p class="rule-label">${rules[2].join("&nbsp;")}</p>`
+      `<p class="number-label">6</p><p class="rule-label">${
+        rules[0].join("&nbsp;")
+      }</p>`,
+      `<p class="number-label">2</p><p class="rule-label">${
+        rules[1].join("&nbsp;")
+      }</p>`,
+      `<p class="number-label">1</p><p class="rule-label">${
+        rules[2].join("&nbsp;")
+      }</p>`,
     ].join("");
   }
 
@@ -60,7 +65,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
     const ruleParts = rules[2][0].split(/[ ]/);
     text1.childNodes.forEach((node, index) => {
       const rulePart = ruleParts[index];
-      if (rulePart) {      
+      if (rulePart) {
         (node as HTMLElement).innerHTML = ruleParts[index];
       }
     });
@@ -82,8 +87,8 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
   return rules;
 }
 
-const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
-  const prepred = row.split(';').map((el: string) => {
+function prepareRow(row: string, isPlural = true): Array<string> {
+  const prepred = row.split(";").map((el: string) => {
     // drop placeholder, remove blanks
     let pretty = el.replace(/{x}/g, "").trim();
 
@@ -91,7 +96,10 @@ const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
     // check for substring with singular/plural informaiton
     const pluralSubstring = match?.[0];
     if (pluralSubstring) {
-      const splitted = pluralSubstring.replace("[", "").replace("]", "").split("|");
+      const splitted = pluralSubstring
+        .replace("[", "")
+        .replace("]", "")
+        .split("|");
       // first item is plural
       let pluralizationStr = splitted[0];
 
@@ -100,22 +108,20 @@ const prepareRow = (row: string, isPlural: boolean = true): Array<string> => {
         pluralizationStr = splitted[1];
       } else if (!isPlural && splitted.length === 1) {
         // singular form is substring of whole word
-        pluralizationStr = ""; 
+        pluralizationStr = "";
       }
 
       // replace string
       pretty = match?.input?.replace(/\[.*\]/, pluralizationStr) ?? pretty;
     }
-   
+
     return pretty;
   });
 
   return prepred;
 }
 
-
-
 (async () => {
-  const rules = await prepareData().then(rules => rules);
-  console.log({rules});
+  const rules = await prepareData();
+  console.log(rules);
 })();

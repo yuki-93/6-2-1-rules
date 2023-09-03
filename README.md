@@ -1,20 +1,18 @@
 # 6-2-1-rules
+
 6-2-1 rules generator
 
-Generate 6-2-1 rules. Data source: https://pad.medialepfade.net/6-2-1-Generator?both
+Generate 6-2-1 rules. Data source:
+<https://pad.medialepfade.net/6-2-1-Generator?both>
 
-Inspired by CCC-events 6-2-1 Rule: 6 hours of sleep, 2 meals, 1 shower - repeat daily.
+Inspired by CCC-events 6-2-1 Rule:
 
-## Prod
-```sh 
-yarn install 
-yarn build
-# serve dist/ folder
+> 6 hours of sleep, 2 meals, 1 shower - repeat daily.
+
+## Build
+
+```bash
+deno task bundle
 ```
 
-## Development
-```sh
-yarn install
-yarn dev
-# open browser 
-```
+Now the folder `public` contains a static webpage and can be deployed.
