@@ -6,7 +6,7 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
   const storage = window.sessionStorage.getItem("rawData");
   let data = storage ?? "";
   if (!storage) {
-    data = await fetch("https://pad.medialepfade.net/6-2-1-Generator/download").then(r => r.text());
+    data = await fetch("/rules.txt").then(r => r.text());
     window.sessionStorage.setItem("rawData", data ?? "");
   }
   const dataArray: Array<string> = data.split("\n")

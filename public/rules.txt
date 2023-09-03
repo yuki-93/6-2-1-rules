@@ -1,0 +1,74 @@
+# 6-2-1 Rule Generator
+
+_Bitte mit \{x\} als Placeholder angeben_
+
+## Rows
+{x} Liter Mate ; 🧉
+{x} Flasch[en|e] Mate ; 🧉
+{x} Stunde[n] Schlaf ; 😴
+{x} Mahlzeit[en] ; 🤤
+{x} Blåhai[e] ; 🦈
+{x} Katzen- ohr[en] ; 😸
+{x} Event- Bändchen ; 🎟️
+{x} Umarm- ung[en] ; 🤗
+{x} Stunde[n] Engeln ; 👼
+{x} Dusche[n] ; 🚿
+{x} Minute[n] Schlaf ; 🥱
+{x} Reboot[s] ; 👨‍💻
+{x} bahn.expert Abfragen ;  🚆
+{x} Mal Frühstücken ; 🥐
+{x} Minute[n] Verspätung ; 🚧
+{x} Stunde[n] Frühstück ; 🥞
+{x} Gerät[e] dabei ; 📟
+{x} Tag[e] Aufbau ; 📆
+{x} USB-C Stecker im Rucksack ; 🔌
+{x} USB-Stecker umdrehen ; 🔌
+{x} neue Projekt- idee[n] ; 💭
+{x} Vortrags- Track[s] ; 📽️
+{x} neue Sticker ; 💮
+{x} Klo[gänge|gang] ; 🚽
+{x} DECT- Anruf[e] ; ☎️
+{x} Waffel[n] ; 🧇
+{x} Corona Test[s] ; 😷
+{x} FFP2-Maske[n] ; 😷
+{x} Postkarte[n] verschicken ; 💌
+{x} Manner- schnitte[n] ; 🍪
+{x} Blinken- lights ; 🚦
+{x} Stunde[n] zuhören ; 👂
+{x} Liter Wasser trinken ; 🚰
+{x} Rubic's Cube[s] lösen ; 🧩
+{x} Talk[s] verpassen ; 🎞️
+{x} FreundIn[nen] dazu gewinnen ; 🧑
+{x} Mensch[en] suchen ; 🧑
+{x} Schritt[e] laufen ; 🚶
+{x} Meter bewegen ; 📏
+{x} Tag[e] wach ; 😫
+{x} Ein[hörner|horn] flauschen ; 🦄
+{x} Congressseuche[n] einfangen ; 😷
+{x} Flaschenkiste[n] sortieren ; 🍶
+{x} Evakuierung[en] wegen Unwetter ; ⛈️
+{x} Kalt- geräte- kabel ; 🔌
+{x} CERT- Ein[sätze|satz] verursachen ; 🚑
+{x} Tasse[n] Kaffee ; ☕
+{x} Katzen- wesen anmaunzen ; 😺
+{x} Gl[äser|as] Tschunk ; 🍹
+{x} Banane[n] ; 🍌
+{x} beste[n|r] Cyber ; 🧑‍💻
+{x} Staubsauger- roboter ausführen ; 🤖
+{x} DECT[s] mitnehmen ; ☎️
+{x} Fax[e] schicken ; 📠
+{x} IFG-Anfrage[n] stellen ; ❓
+{x} Platine[n] löten ; 🔌 
+{x} Tafel[n] Schokolade ; 🍫
+{x} Work- shop[s] ; 🛠️
+{x} Chaos-Post Brief[e] verschickt ; 💌
+{x} Sticker- Box[en] durchgewühlt ; 🫴
+
+
+
+
+
+
+
+
+
