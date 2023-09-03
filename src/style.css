@@ -58,13 +58,24 @@ h1 {
 
 #image {
   height: auto;
+  margin: 20px auto;
 }
 
 p { 
   font-size: 30px;
+  margin: 0;
+}
+
+p.number-label {
+  font-size: 100px;
+  font-family: "Saira Stencil One", sans-serif;
+}
+
+p.rule-label {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
 }
 
 footer {
-  position: absolute;
-  bottom: 5px;
+  margin-bottom: 5px;
 }

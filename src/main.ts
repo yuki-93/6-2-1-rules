@@ -21,9 +21,13 @@ const prepareData = async (): Promise<Array<Array<string>>> => {
     prepareRow(rulesRaw[2], false),
   ]
 
-  const app = document.querySelector("#app");
+  const app = document.querySelector("#app>#content");
   if (app) {
-    app.innerHTML = rules.map((rule: Array<string>) => `<p>${rule.join("&nbsp;")}</p>`).join("");
+    app.innerHTML = [
+      `<p class="number-label">6</p><p class="rule-label">${rules[0].join("&nbsp;")}</p>`,
+      `<p class="number-label">2</p><p class="rule-label">${rules[1].join("&nbsp;")}</p>`,
+      `<p class="number-label">1</p><p class="rule-label">${rules[2].join("&nbsp;")}</p>`
+    ].join("");
   }
 
   const text6 = document.querySelector("#sticker_6_text");
