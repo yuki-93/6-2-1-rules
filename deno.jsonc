@@ -2,7 +2,8 @@
   // https://deno.land/manual/getting_started/configuration_file
   "lock": false,
   "tasks": {
-    "bundle": "deno run --allow-env --allow-read --allow-write=public/main.js --allow-net=deno.land bundle.ts"
+    "bundle": "deno run --allow-env --allow-read --allow-write=public/main.js --allow-net=deno.land bundle.ts",
+    "dev": "deno run --watch=main.ts --allow-all bundle.ts"
   },
   // https://deno.land/manual/advanced/typescript/configuration
   // https://www.typescriptlang.org/tsconfig/
