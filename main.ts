@@ -1,7 +1,7 @@
 const getRandomItem = (items: Array<string>): string =>
   items[Math.floor(Math.random() * items.length)];
 
-async function prepareData(): Promise<Array<Array<string>>> {
+const prepareData = async (): Promise<Array<Array<string>>> => {
   const storage = window.sessionStorage.getItem("rawData");
   let data = storage ?? "";
   if (!storage) {
@@ -85,9 +85,9 @@ async function prepareData(): Promise<Array<Array<string>>> {
   }
 
   return rules;
-}
+};
 
-function prepareRow(row: string, isPlural = true): Array<string> {
+const prepareRow = (row: string, isPlural = true): Array<string> => {
   const prepred = row.split(";").map((el) => {
     // drop placeholder, remove blanks
     let pretty = el.replace(/{x}/g, "").trim();
@@ -119,7 +119,7 @@ function prepareRow(row: string, isPlural = true): Array<string> {
   });
 
   return prepred;
-}
+};
 
 (async () => {
   const rules = await prepareData();
